@@ -1,0 +1,27 @@
+{
+  "agent": {
+    "metrics_collection_interval": 60
+  },
+  "metrics": {
+    "namespace": "Jenkins/Infra",
+    "append_dimensions": {
+      "InstanceId": "${aws:InstanceId}"
+    },
+    "metrics_collected": {
+      "Processor": {
+        "measurement": ["% Processor Time"],
+        "metrics_collection_interval": 60,
+        "resources": ["_Total"]
+      },
+      "Memory": {
+        "measurement": ["% Committed Bytes In Use"],
+        "metrics_collection_interval": 60
+      },
+      "LogicalDisk": {
+        "measurement": ["% Free Space"],
+        "metrics_collection_interval": 60,
+        "resources": ["*"]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# Copy this file to terraform.tfvars and fill in your real instance IDs.
+# terraform.tfvars is gitignored — it's environment-specific, commit this
+# .example file instead.
+
+aws_region   = "us-east-1"
+project_name = "jenkins-monitoring"
+
+# Assumed Linux — see the note on this variable in variables.tf if wrong.
+jenkins_master_instance_id = "i-0123456789abcdef0"
+
+linux_agent_instance_ids = [
+  "i-0aaaaaaaaaaaaaaaa",
+  "i-0bbbbbbbbbbbbbbbb",
+  "i-0cccccccccccccccc",
+  "i-0dddddddddddddddd",
+]
+
+windows_agent_instance_ids = [
+  "i-0eeeeeeeeeeeeeeee",
+  "i-0ffffffffffffffff",
+]
